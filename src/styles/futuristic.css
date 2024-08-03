@@ -1,0 +1,37 @@
+/* src/styles/futuristic.css */
+body {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+.futuristic-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: #00fff5;
+  padding: 10px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.futuristic-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 255, 245, 0.5);
+}
+
+.futuristic-button.selected {
+  background: rgba(0, 255, 245, 0.2);
+}
+
+/* Add other styles here... */
+.app-container {
+  max-width: 1350px; /* Adjust this value as needed */
+  margin: 0 auto;
+  padding: 0 12px; /* This adds 20px padding on both sides */
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0 5px; /* Reduce padding for smaller screens */
+  }
+}

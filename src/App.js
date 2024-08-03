@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+
+import React, { useState, useEffect } from "react";
+import NitoAIInventoryManagement from "./NitoAIInventoryManagement";
+import YearlySavingsAnalysis from "./components/YearlySavingsAnalysis";
+import { generateYearlyData } from "./data/generateYearlyData"; // Adjust the import path as necessary
+import "./styles/App.css";
+import "./styles/futuristic.css";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
+  const [yearlyData, setYearlyData] = useState([]);
+
+  useEffect(() => {
+    const data = generateYearlyData();
+    setYearlyData(data);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="futuristic-app app-container">
+      {" "}
+      {/* Add app-container class */} {/* Add app-container class */}
+      <CustomCursor />
+      <NitoAIInventoryManagement />
     </div>
   );
 }
 
 export default App;
+
+// <YearlySavingsAnalysis yearlyData={yearlyData} />;

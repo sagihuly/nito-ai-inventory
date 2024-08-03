@@ -1,0 +1,34 @@
+/* src/components/YearlySavingsAnalysis.css */
+
+.yearly-savings-analysis {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.section-title {
+  color: #2c3e50;
+}
+
+.data-card {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.achievements-list {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.achievements-list li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.achievements-list li::before {
+  content: "\f06e";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4caf50;
+}

@@ -1,38 +1,637 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap");
+
+body {
+  background-color: #0a0a1f;
+  color: #e0e0ff;
+  font-family: "Roboto", sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-family: "Orbitron", sans-serif;
+  color: #00ffff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subtitle {
+  color: #7f7fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-title {
+  font-family: "Orbitron", sans-serif;
+  color: #00ccff;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.text-primary {
+  color: #00ffff;
+}
+
+.text-secondary {
+  color: #7fff7f;
+}
+
+.text-accent {
+  color: #ff3333;
+}
+
+.text-large {
+  font-size: 1.2rem;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.button {
+  background-color: #00ccff;
+  color: #0a0a1f;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.button.selected {
+  background-color: #7f7fff;
+  color: #ffffff;
+}
+
+.chart-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.savings-stats {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.total-savings {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+  color: #00ffff;
+  margin-top: 1rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.savings-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.savings-list li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.savings-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #00ffff;
+}
+
+/* Add this to your App.css or create a new CSS file */
+
+.nito-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: #00fff5;
+  text-shadow: 0 0 10px rgba(0, 255, 245, 0.5);
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.nito-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #b3e5fc;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.dish-select-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+  color: #64ffda;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.dish-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  border-radius: 8px;
+  color: #64ffda;
+  padding: 8px 16px;
+  margin: 0 10px 10px 0;
+  transition: all 0.3s ease;
+}
+
+.dish-button:hover,
+.dish-button.selected {
+  background: rgba(100, 255, 218, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(100, 255, 218, 0.3);
+}
+
+.selected-dish-info {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.selected-dish-name {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.3rem;
+  color: #00fff5;
+  margin-bottom: 10px;
+}
+
+.dish-detail {
+  font-family: "Roboto", sans-serif;
+  color: #b3e5fc;
+  margin-bottom: 5px;
+}
+
+.dish-detail-value {
+  color: #64ffda;
+  font-weight: bold;
+}
+
+.comparison-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.4rem;
+  color: #00fff5;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.waste-card {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.waste-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  color: #64ffda;
+  margin-bottom: 10px;
+}
+
+.waste-amount {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #00fff5;
+  margin-bottom: 5px;
+}
+
+.waste-description {
+  font-family: "Roboto", sans-serif;
+  color: #b3e5fc;
+  font-size: 0.9rem;
+}
+
+.yearly-comparison-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  color: #00fff5;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(0, 255, 245, 0.4);
+}
+
+/* Add this to your App.css or create a new CSS file */
+
+.nito-inventory-management {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #2c3e50;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-bottom: 1rem;
+}
+
+.data-card {
+  background-color: #ecf0f1;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dish-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dish-button {
+  background-color: #3498db;
   color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.dish-button:hover,
+.dish-button.selected {
+  background-color: #2980b9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dish-info {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.dish-name {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
+.dish-detail {
+  color: #7f8c8d;
+  margin-bottom: 0.25rem;
+}
+
+.chart-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.waste-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.waste-card {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.waste-title {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
+.waste-amount {
+  font-size: 2rem;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.waste-description {
+  color: #7f8c8d;
+}
+
+.savings-analysis {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.savings-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-title {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  color: #2980b9;
+}
+
+.total-savings {
+  font-size: 1.5rem;
+  color: #27ae60;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.savings-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.savings-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.savings-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #3498db;
+}
+
+/* Add this to your App.css or create a new CSS file */
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+.nito-inventory-management {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  color: #2980b9;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.selection-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.supplier-selection,
+.item-selection {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.selected-item-info {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.item-name {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.item-detail {
+  color: #7f8c8d;
+  margin-bottom: 0.25rem;
+}
+
+.item-value {
+  color: #2980b9;
+  font-weight: bold;
+}
+
+.waste-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.waste-card,
+.savings-card {
+  text-align: center;
+}
+
+.waste-amount,
+.savings-amount {
+  font-size: 2rem;
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.waste-description,
+.savings-description {
+  color: #7f8c8d;
+}
+
+.savings-analysis {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.analysis-intro {
+  margin-bottom: 1rem;
+}
+
+.savings-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+}
+
+.stat-title {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  color: #2980b9;
+}
+
+.total-savings {
+  font-size: 1.5rem;
+  color: #27ae60;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.savings-icon {
+  margin-right: 0.5rem;
+}
+
+.savings-explanation {
+  margin-top: 1.5rem;
+}
+
+.explanation-title {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.explanation-icon {
+  margin-right: 0.5rem;
+  color: #27ae60;
+}
+
+.savings-list {
+  list-style-type: none;
+  padding-left: 1.5rem;
+}
+
+.savings-list li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.savings-list li::before {
+  content: "→";
+  position: absolute;
+  left: -1.5rem;
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .selection-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .supplier-selection,
+  .item-selection {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .waste-comparison {
+    grid-template-columns: 1fr;
   }
 }
