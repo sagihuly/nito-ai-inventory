@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nito-ai-inventory/static/css/main.e9671ff9.css",
-    "main.js": "/nito-ai-inventory/static/js/main.b9190b11.js",
+    "main.js": "/nito-ai-inventory/static/js/main.93a788f1.js",
     "static/js/453.b1ae45c2.chunk.js": "/nito-ai-inventory/static/js/453.b1ae45c2.chunk.js",
     "index.html": "/nito-ai-inventory/index.html",
     "main.e9671ff9.css.map": "/nito-ai-inventory/static/css/main.e9671ff9.css.map",
-    "main.b9190b11.js.map": "/nito-ai-inventory/static/js/main.b9190b11.js.map",
+    "main.93a788f1.js.map": "/nito-ai-inventory/static/js/main.93a788f1.js.map",
     "453.b1ae45c2.chunk.js.map": "/nito-ai-inventory/static/js/453.b1ae45c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e9671ff9.css",
-    "static/js/main.b9190b11.js"
+    "static/js/main.93a788f1.js"
   ]
 }
